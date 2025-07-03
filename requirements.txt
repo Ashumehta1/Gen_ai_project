@@ -1,0 +1,10 @@
+numpy
+pandas
+streamlit
+matplotlib
+seaborn
+PyPDF2
+langchain
+langchain_community
+faiss-cpu
+plotly
