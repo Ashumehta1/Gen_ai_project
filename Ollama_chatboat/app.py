@@ -24,7 +24,7 @@ def generate_responce(question,engine,temperature,max_token):
 
 #side bar
 engine=st.sidebar.selectbox("select llm for responce",['gemma2','llama2'])
-temperature=st.sidebar.slider("select temp for model",min_value=0.0,max_value=1,value=0.7)
+temperature=st.sidebar.slider("select temp for model",min_value=0.0,max_value=1.0,value=0.7)
 max_token=st.sidebar.slider("select the number of token",min_value=150,max_value=300,value=170)
 
 
@@ -34,7 +34,5 @@ user_input=st.text_input("you: ")
 if user_input:
     response=generate_responce(user_input,engine,temperature,max_token)
     st.write(response)
-elif user_input:
-    st.warning("please provide your questions")
 else:
     st.write("please provide user input")
