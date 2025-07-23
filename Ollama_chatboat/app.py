@@ -31,8 +31,9 @@ max_token=st.sidebar.slider("select the number of token",min_value=150,max_value
 st.write("Ask your questions")
 user_input=st.text_input("you: ")
 
-if user_input:
-    response=generate_responce(user_input,engine,temperature,max_token)
-    st.write(response)
-else:
-    st.write("please provide user input")
+if st.button("ask"):
+    if user_input:
+        response=generate_responce(user_input,engine,temperature,max_token)
+        st.write(response)
+    else:
+        st.write("please provide user input")
